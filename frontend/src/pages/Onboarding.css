@@ -1,0 +1,293 @@
+
+/* =====================================
+   ONBOARDING PAGE
+===================================== */
+
+.onboarding-page {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #e8e8e8;
+
+  padding: 20px;
+}
+
+
+/* =====================================
+   ONBOARDING CARD
+===================================== */
+
+.onboarding-card {
+  width: 100%;
+  max-width: 390px;
+
+  height: min(850px, calc(100vh - 40px));
+  min-height: 600px;
+
+  background-color: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+}
+
+
+/* =====================================
+   BLUE ILLUSTRATION SECTION
+===================================== */
+
+.onboarding-illustration {
+  flex: 0 0 65%;
+
+  position: relative;
+
+  background-color: #4865f5;
+
+  overflow: hidden;
+}
+
+
+/* =====================================
+   DECORATIVE CIRCLE
+===================================== */
+
+.decoration-circle {
+  position: absolute;
+
+  top: -30px;
+  right: -30px;
+
+  width: 90px;
+  height: 90px;
+
+  border: 10px solid rgba(255, 255, 255, 0.12);
+
+  border-radius: 50%;
+}
+
+
+/* =====================================
+   DECORATIVE WAVE PATTERNS
+===================================== */
+
+.wave-pattern {
+  position: absolute;
+
+  color: rgba(255, 255, 255, 0.18);
+
+  font-size: 40px;
+  font-weight: 700;
+
+  line-height: 20px;
+  letter-spacing: -5px;
+
+  user-select: none;
+}
+
+
+/* Top Left Waves */
+
+.wave-top {
+  top: 75px;
+  left: -15px;
+
+  transform: rotate(-45deg);
+}
+
+
+/* Bottom Right Waves */
+
+.wave-bottom {
+  right: 10px;
+  bottom: 40px;
+
+  transform: rotate(-45deg);
+}
+
+
+/* =====================================
+   WHITE CONTENT SECTION
+===================================== */
+
+.onboarding-content {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 24px 22px 22px;
+
+  background-color: #ffffff;
+}
+
+
+/* =====================================
+   HEADING
+===================================== */
+
+.onboarding-content h1 {
+  font-size: 23px;
+  font-weight: 700;
+
+  color: #171717;
+
+  line-height: 1.3;
+
+  margin-bottom: 12px;
+
+  letter-spacing: -0.4px;
+}
+
+
+/* =====================================
+   DESCRIPTION
+===================================== */
+
+.onboarding-content p {
+  max-width: 280px;
+
+  font-size: 12px;
+  font-weight: 400;
+
+  line-height: 1.6;
+
+  color: #929292;
+}
+
+
+/* =====================================
+   GET STARTED BUTTON
+===================================== */
+
+.get-started-button {
+  width: 100%;
+  height: 48px;
+
+  margin-top: auto;
+
+  background-color: #4865f5;
+
+  color: #ffffff;
+
+  border: none;
+  border-radius: 0;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+/* Button Hover */
+
+.get-started-button:hover {
+  background-color: #3854e8;
+}
+
+
+/* Button Click */
+
+.get-started-button:active {
+  transform: scale(0.98);
+}
+
+
+/* =====================================
+   TABLET RESPONSIVE
+===================================== */
+
+@media (max-width: 768px) {
+  .onboarding-page {
+    padding: 0;
+
+    background-color: #ffffff;
+  }
+
+  .onboarding-card {
+    width: 100%;
+    max-width: 100%;
+
+    height: 100vh;
+    min-height: 600px;
+  }
+
+  .onboarding-illustration {
+    flex-basis: 65%;
+  }
+
+  .onboarding-content {
+    padding: 24px 22px 20px;
+  }
+}
+
+
+/* =====================================
+   MOBILE RESPONSIVE
+===================================== */
+
+@media (max-width: 480px) {
+  .onboarding-card {
+    height: 100dvh;
+    min-height: 0;
+  }
+
+  .onboarding-illustration {
+    flex-basis: 65%;
+  }
+
+  .onboarding-content {
+    flex: 1;
+
+    padding: 22px 20px 20px;
+  }
+
+  .onboarding-content h1 {
+    font-size: 21px;
+  }
+
+  .onboarding-content p {
+    font-size: 11px;
+  }
+
+  .get-started-button {
+    height: 46px;
+    font-size: 13px;
+  }
+}
+
+
+/* =====================================
+   SMALL MOBILE
+===================================== */
+
+@media (max-width: 360px) {
+  .onboarding-content {
+    padding: 20px 16px;
+  }
+
+  .onboarding-content h1 {
+    font-size: 19px;
+  }
+
+  .onboarding-content p {
+    font-size: 10px;
+  }
+
+  .get-started-button {
+    height: 44px;
+  }
+}

@@ -1,0 +1,325 @@
+
+/* =========================================
+   NEW TASK PAGE
+========================================= */
+
+.new-task-page {
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  background: #e9e9e9;
+  padding: 20px;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.new-task-container {
+  width: 100%;
+  max-width: 430px;
+
+  min-height: 680px;
+
+  background: #ffffff;
+
+  padding: 22px 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.new-task-header {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 25px;
+}
+
+.back-button {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+  border: none;
+
+  color: #222222;
+
+  cursor: pointer;
+  padding: 0;
+}
+
+.back-button:hover {
+  color: #4865f5;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.new-task-form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 22px;
+
+  width: 100%;
+}
+
+
+/* =========================================
+   TASK TITLE INPUT
+========================================= */
+
+.task-title-input {
+  width: 100%;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border: 1px solid #eeeeee;
+  border-radius: 4px;
+
+  padding: 0 12px;
+
+  color: #3e4558;
+}
+
+.task-title-input input {
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  font-size: 12px;
+  color: #333333;
+}
+
+.task-title-input input::placeholder {
+  color: #999999;
+}
+
+
+/* =========================================
+   FORM FIELDS
+========================================= */
+
+.new-task-field {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.new-task-field label {
+  font-size: 12px;
+  font-weight: 400;
+
+  color: #888888;
+}
+
+
+/* =========================================
+   TIME INPUTS
+========================================= */
+
+.new-task-time-row {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+.new-task-input-icon {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  width: 100%;
+  min-width: 0;
+  height: 42px;
+
+  border: 1px solid #eeeeee;
+  border-radius: 4px;
+
+  padding: 0 10px;
+
+  color: #555555;
+}
+
+.new-task-input-icon input {
+  width: 100%;
+  min-width: 0;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  font-size: 12px;
+  color: #333333;
+}
+
+
+/* =========================================
+   DATE INPUT
+========================================= */
+
+.new-task-input-icon input[type="date"] {
+  cursor: pointer;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.new-task-field textarea {
+  width: 100%;
+  min-height: 120px;
+
+  border: 1px solid #eeeeee;
+  border-radius: 4px;
+
+  padding: 12px;
+
+  font-size: 12px;
+  line-height: 1.5;
+
+  color: #333333;
+  background: #ffffff;
+
+  outline: none;
+
+  resize: vertical;
+}
+
+.new-task-field textarea::placeholder {
+  color: #999999;
+}
+
+
+/* =========================================
+   INPUT FOCUS
+========================================= */
+
+.new-task-input-icon:focus-within,
+.task-title-input:focus-within {
+  border-color: #4865f5;
+}
+
+.new-task-field textarea:focus {
+  border-color: #4865f5;
+}
+
+
+/* =========================================
+   CREATE TASK BUTTON
+========================================= */
+
+.create-task-button {
+  width: 100%;
+  height: 48px;
+
+  background: #4865f5;
+  color: #ffffff;
+
+  border: none;
+  border-radius: 0;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  margin-top: 5px;
+
+  transition: background 0.2s ease;
+}
+
+.create-task-button:hover {
+  background: #3854e8;
+}
+
+.create-task-button:active {
+  transform: scale(0.99);
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 480px) {
+  .new-task-page {
+    padding: 0;
+    background: #ffffff;
+  }
+
+  .new-task-container {
+    width: 100%;
+    max-width: 100%;
+
+    min-height: 100vh;
+
+    padding: 22px 20px;
+  }
+
+  .new-task-header {
+    margin-bottom: 25px;
+  }
+
+  .new-task-form {
+    gap: 22px;
+  }
+
+  .new-task-field textarea {
+    min-height: 120px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 360px) {
+  .new-task-container {
+    padding: 18px 15px;
+  }
+
+  .new-task-time-row {
+    gap: 8px;
+  }
+
+  .new-task-input-icon {
+    padding: 0 7px;
+    gap: 5px;
+  }
+
+  .new-task-input-icon input {
+    font-size: 11px;
+  }
+}
